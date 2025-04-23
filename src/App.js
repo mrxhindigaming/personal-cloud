@@ -25,7 +25,9 @@ function App() {
     formData.append("file", file);
 
     try {
-      await axios.post("http://localhost:5000/upload/upload", formData);
+      await axios.post("https://perosnal-cloud-backend-8.onrender.com/upload/upload", formData);
+
+
       setFile(null);
       fetchFiles();
     } catch (error) {
