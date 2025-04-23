@@ -57,38 +57,43 @@ function App() {
       background: "linear-gradient(to right, #8EC5FC, #E0C3FC)",
       padding: "20px",
       fontFamily: "'Segoe UI', sans-serif",
-      color: "#333"
+      color: "#333",
+      boxSizing: "border-box",
     },
     title: {
-      fontSize: "32px",
+      fontSize: "28px",
       fontWeight: "bold",
       textAlign: "center",
       marginBottom: "30px",
       color: "#fff",
-      textShadow: "1px 1px 3px rgba(0,0,0,0.5)"
+      textShadow: "1px 1px 3px rgba(0,0,0,0.5)",
     },
     centerBox: {
       backgroundColor: "#ffffffcc",
-      padding: "30px",
+      padding: "20px",
       borderRadius: "16px",
       maxWidth: "750px",
       margin: "0 auto",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.2)"
+      boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+      width: "100%",
+      boxSizing: "border-box",
     },
     sectionTitle: {
-      fontSize: "22px",
+      fontSize: "20px",
       fontWeight: "bold",
       marginBottom: "20px",
-      color: "#4b0082"
+      color: "#4b0082",
+      textAlign: "center",
     },
     fileInputRow: {
       display: "flex",
       justifyContent: "center",
       gap: "12px",
-      marginBottom: "25px"
+      flexWrap: "wrap", // ✅ Makes it wrap on small screens
+      marginBottom: "25px",
     },
     uploadButton: {
-      padding: "10px 24px",
+      padding: "10px 20px",
       background: "linear-gradient(to right, #667eea, #764ba2)",
       color: "#fff",
       border: "none",
@@ -96,36 +101,41 @@ function App() {
       cursor: "pointer",
       fontWeight: "bold",
       boxShadow: "0 4px 10px rgba(118, 75, 162, 0.4)",
-      transition: "transform 0.2s ease-in-out"
+      transition: "transform 0.2s ease-in-out",
+      width: "150px", // ✅ Fixed width for mobile consistency
     },
     table: {
       width: "100%",
       borderCollapse: "collapse",
       borderRadius: "10px",
-      overflow: "hidden",
-      boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)"
+      overflowX: "auto",
+      boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
     },
     th: {
       textAlign: "left",
       padding: "12px",
       backgroundColor: "#7f5af0",
       color: "#fff",
-      fontWeight: "600"
+      fontWeight: "600",
+      fontSize: "14px",
     },
     td: {
       padding: "12px",
       backgroundColor: "#f9f9f9",
-      borderBottom: "1px solid #e0e0e0"
+      borderBottom: "1px solid #e0e0e0",
+      fontSize: "14px",
+      wordBreak: "break-word",
     },
     link: {
       color: "#4f46e5",
       textDecoration: "none",
-      fontWeight: "bold"
+      fontWeight: "bold",
     },
     actionButtons: {
-      display: 'flex',
-      gap: '8px',
-      alignItems: 'center',
+      display: "flex",
+      gap: "8px",
+      flexWrap: "wrap",
+      justifyContent: "center",
     },
     downloadBtn: {
       backgroundColor: "#2ecc71",
@@ -135,7 +145,7 @@ function App() {
       padding: "8px 12px",
       cursor: "pointer",
       fontWeight: "bold",
-      transition: "background-color 0.2s ease"
+      transition: "background-color 0.2s ease",
     },
     deleteBtn: {
       color: "#f43f5e",
@@ -143,9 +153,10 @@ function App() {
       border: "none",
       cursor: "pointer",
       fontWeight: "bold",
-      transition: "color 0.2s ease"
-    }
+      transition: "color 0.2s ease",
+    },
   };
+  
 
   return (
     <div style={styles.container}>
